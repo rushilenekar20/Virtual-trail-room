@@ -17,7 +17,7 @@ ScreenShots :
 ![Screenshot (2)](https://user-images.githubusercontent.com/55945522/137471440-f6ba7fe3-c542-48ba-92b1-bd99807f5a69.png)
 
 2.Trail Room 
-![Screenshot (6)](https://user-images.githubusercontent.com/55945522/137471400-8f19389b-27b3-4081-b872-208af0798b4a.png)
+![Screenshot (6)](https://user-images.githubusercontent.com/55945522/137471855-991fac05-d8e9-48f7-8f13-7634d79c118d.png)
 ![Screenshot (7)](https://user-images.githubusercontent.com/55945522/137471410-af007daa-19a0-454a-b35e-3814c44480e2.png)
 ![Screenshot (8)](https://user-images.githubusercontent.com/55945522/137471413-e5aa930b-4897-4f41-a467-0a74bf9c1262.png)
 ![Screenshot (3)](https://user-images.githubusercontent.com/55945522/137471443-823d5d44-97bc-4d72-b0c9-79a2f1c70549.png)
