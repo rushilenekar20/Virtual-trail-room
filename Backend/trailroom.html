@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style1.css">
+  <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@1.0.0"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://unpkg.com/ml5@0.5.0/dist/ml5.min.js"></script>
+</head>
+
+<body>
+
+    <div class="head">
+        <h1><center>VIRTUAL DRESSING ROOM</center></h1>
+    </div>
+    
+  
+    <hr size="0.1" width="100%" align="left" color="black"/>
+
+  <!-- <hr style="width:0.5px;height:700px;position:absolute;left:50%;color:black"/> -->
+ <div class="main">
+        <div class="container">
+          <h3>Description</h3>
+          <p id="display"> </p>
+        </div>
+        <div class="canvas" id="canvas">
+          <img id="person" src='img/per1.jpg'/>
+          <br>
+          <!-- <button class="nextbuttoncanvas" id="" onclick="" >360</button> -->
+          <button class="nextbuttoncanvas" id="" onclick="changeCombinations()" ><span id="combination">Try Combinatioms </span></button>
+          <!-- <button class="nextbuttoncanvas" id="" onclick="changeSkelton()" >Skelton</button> -->
+        </div>
+        <div class="instruction">
+          <a href="../index.html"><button class="instrbut" id="" onclick=""><span>Home Page</span></button><br></a>
+          <a href="measurment.html"><button class="instrbut" id="" onclick=""><span>Virtual Measurement ROOM</span></button><br></a>
+            <button class="instrbut" id="" onclick="trailchange()"><span id="originalImage">Original Image </span></button><br>
+            <button class="instrbut" id="" onclick="shirtchange()"><span  id="shirtImage">Add shirt</span> </button><br>
+            <button class="instrbut" id="" onclick="pantchange()"><span  id="pantImage">Add pant </span></button><br>
+            <button class="instrbut" id="" onclick="watchchange()"><span  id="wristImage">Add Wrist Watch </span></button><br>
+            <button class="instrbut" id="" onclick="shoeschange()"><span  id="shoesImage">Add shoes </span></button><br>
+            <button class="instrbut" id="" onclick="sungchange()"><span  id="sungImage">Add sunglass </span></button><br>
+            <button class="instrbut" id="" onclick="AddToCart()"><span  id="Buy">Add TO Cart </span></button><br>
+            
+        </div>
+
+</div>
+
+<div>
+  
+  <div class="small-container">
+    <h2 class="title">Featured Products</h2>
+    <div class="row">
+      <div class="col-4">
+          <img class="image" src="img/suit1.jpg" alt=""
+        />
+        <h4>Navy Black Suit</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$50.00</p><br>
+        <button class="nextbuttoncanvas" id="" onclick="TrailButton(1)">TRY</button>
+      </div>
+
+      <div class="col-4">
+        <img src="img/shirt2.jpg" class="image" alt="" />
+        <h4>Blue casual Shirt</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$50.00</p>
+        <br>
+        <button class="nextbuttoncanvas"id="" onclick="TrailButton(2)">TRY</button>
+      </div>
+
+      <div class="col-4">
+        <img class="image" src="img/shirt8.jpg" alt=""
+      />
+      <h4>Red shirt</h4>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+      </div>
+      <p>$50.00</p><br>
+      <button class="nextbuttoncanvas" id="" onclick="TrailButton(10)">TRY</button>
+      </div>
+
+
+      <div class="col-4">
+        <img src="img/pant8.jpg" class="image" alt="" />
+        <h4>Blue Cargo Pant</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$50.00</p><br>
+        <button class="nextbuttoncanvas" id="" onclick="TrailButton(4)">TRY</button>
+      </div>
+
+      
+
+      <div class="col-4">
+        <img src="img/shoes2.jpg" class="image" alt="" />
+        <h4>Red shoes</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$50.00</p><br>
+        <button class="nextbuttoncanvas" id="" onclick="TrailButton(6)">TRY</button>
+      </div>
+
+      <div class="col-4">
+        <img class="image" src="img/pant6.jpeg" alt=""
+      />
+      <h4>Gray Short Pant</h4>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+      </div>
+      <p>$50.00</p><br>
+      <button class="nextbuttoncanvas" id="" onclick="TrailButton(8)">TRY</button>
+    </div>
+    
+    <div class="col-4">
+      <img class="image" src="img/shirt4.jpg" alt=""
+    />
+    <h4>Blue Printed T-shirt</h4>
+    <div class="rating">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-o"></i>
+    </div>
+    <p>$50.00</p><br>
+    <button class="nextbuttoncanvas" id="" onclick="TrailButton(9)">TRY</button>
+  </div>
+  
+      <div class="col-4">
+        <img class="image" src="img/pant7.jpg" alt=""
+      />
+      <h4>Red short pantt</h4>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+      </div>
+      <p>$50.00</p><br>
+      <button class="nextbuttoncanvas" id="" onclick="TrailButton(11)">TRY</button>
+      </div>
+
+      
+      <div class="col-4">
+        <img src="img/watch1.jpg" class="image" alt="" />
+        <h4>Black Watch</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <p>$50.00</p><br>
+        <button class="nextbuttoncanvas" id="" onclick="TrailButton(3)">TRY</button>
+      </div>
+
+      
+      <div class="col-4">
+        <img src="img/sunglass.jpg" class="image" alt="" />
+        <h4>Black sunglass</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <p>$50.00</p><br>
+        <button class="nextbuttoncanvas" id="" onclick="TrailButton(12)">TRY</button>
+      </div>
+
+      <div class="col-4">
+        <img src="img/shirt.jpg" class="image" alt="" />
+        <h4>Blue Shirtt</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$50.00</p><br>
+        <button class="nextbuttoncanvas" id="" onclick="TrailButton(5)">TRY</button>
+      </div>
+
+
+    </div>
+    </div>
+    
+
+
+</div>
+
+
+
+
+
+  <!-- <img id='person' src='img/person1.jpg'/>
+  <img class="first" src="img/1.png"/>
+  <img class="second" src="img/2.png"/>
+  <img class="third" src="img/3.png"/>
+  <img class="fourth" src="img/4.png"/>
+  <div id="box1"></div>
+  <div id="box2"></div>
+  <div id="box3"></div>
+  <div id="box4"></div> -->
+  <script src="bodyPix.js" type="text/javascript"></script>
+</body>
+
+</html>
