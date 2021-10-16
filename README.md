@@ -14,8 +14,6 @@ ScreenShots :
 1.Home Page
  ![Screenshot (1)](https://user-images.githubusercontent.com/55945522/137471334-6bbe7953-92e2-4802-beb8-cd08fb709c4e.png)
  
-![Screenshot (2)](https://user-images.githubusercontent.com/55945522/137471440-f6ba7fe3-c542-48ba-92b1-bd99807f5a69.png)
-
 2.Trail Room 
 
 2.1-> orignal Image
