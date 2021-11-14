@@ -23,6 +23,9 @@ let box3 = document.getElementById('box3');
 let box4 = document.getElementById('box4');
 let showskelton =false;
 
+let cnvPosTop = imageElement.offsetTop;
+let cnvPosLeft = imageElement.offsetLeft;
+console.log("cordinate of image " + imageElement.offsetLeft);
 
 let combination = 0 ;
 let trail=0;
@@ -734,7 +737,14 @@ function changeCombinations(){
  }
 
 function centerCanvas() {
-  cnv.position(610, 160);
+  // cnv.position(610, 160);
+  
+  cnvPosTop = imageElement.offsetTop;
+  cnvPosLeft = imageElement.offsetLeft;
+  
+console.log("cordinate of image " + imageElement.offsetLeft);
+console.log("cordinate of image " + imageElement.offsetTop);
+  cnv.position(cnvPosLeft, cnvPosTop);
 }
 
 function AddToCart(){
